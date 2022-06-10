@@ -337,12 +337,46 @@
             </li>
           </ul>
           </div>
+          <div class="spam">
+            <h2 class="title">подпишитесь на рассылку</h2>
+            <form class="spam-form">            
+            <label class="spam-label">
+            <input class="spam-input" type="email" name="email" placeholder="E-mail"/>
+            </label>
+            <button class="spam-btn" type="submit">Подписаться<a class="spam-link link" href="" target="_blank" rel="noopener noreferrer" aria-label="инстаграм иконка">
+              <svg class="spam-icon" width="24px" height="24px"><use href="./images/sprite.svg#icon-send"></use></svg></a></button>
+            </form>
+          </div>
     </div>
     </div>
   </footer>
   <div class="backdrop is-hidden" data-modal>
     <div class="modal">
       <button class="close" type="button" data-modal-close></button>
+      <p class="ask">Оставьте свои данные, мы вам перезвоним</p>
+      <form name="signup_form" autocomplete="on" novalidate>
+        <label>
+          Имя
+        <input type="text" name="name" autofocus />
+        </label>
+        <label>
+          Телефон
+        <input type="tel" name="phone" />
+        </label>
+        <label>
+          Почта
+        <input type="email" name="email" />
+        </label>
+        <label>
+          Коментарий
+        <textarea name="feedback" rows="6" placeholder="Введите текст"></textarea>
+        </label> 
+        <label>
+        <input type="checkbox" name="policy" value="agree" checked />
+          Cоглашаюсь с рассылкой и принимаю <a class="modal-link" href="">Условия договора</a>
+        </label>
+        <button class="submit-btn" type="submit">Отправить</button>
+      </form>
     </div>
   </div>
   <script src="./js/modal.js"></script>
