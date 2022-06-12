@@ -679,6 +679,8 @@ color: #757575;
     padding: 40px;
    }
    .close {
+    display: flex;
+    align-items: center;
     border-radius: 50%;
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -687,14 +689,13 @@ color: #757575;
     height: 30px;
     top: 8px;
     right: 8px;
-    background-image: url(../images/ico/close-black.svg);
-    background-size: 18px;
-    background-repeat: no-repeat;
-    background-position: center;
+     }
+
+   .modal-xicon {
     fill: #212121;
     transition: fill 250 cubic-bezier(0.4, 0, 0.2, 1);
    }
-   .close:hover{
+   .close:hover .modal-xicon {
     fill: var(--brand-color);
    }
      .ask {
@@ -708,8 +709,8 @@ color: #757575;
     color: #212121;
     margin-bottom: 12px;
    }
-   input {
-    padding: 8px;
+   .modal-input {
+    padding: 8px 40px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -721,12 +722,38 @@ color: #757575;
     border-radius: 4px;
     transition: border 250 cubic-bezier(0.4, 0, 0.2, 1);
   }
-  input:hover {
+  .modal-input:last-child {
+    display: flex;
+    align-items: flex-start;
+    padding: 8px;
+    margin-bottom: 20px;
+    width: 448px;
+    height: 120px;
+  }
+  .modal-input:last-child::placeholder {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+  .modal-input:hover, .modal-input:focus {
     border: 1px solid #2196F3;
     cursor: pointer;
   }
+  .modal-input:hover .modal-icon, .modal-input:focus .modal-icon {
+    fill: #2196F3;
+  }
 
-  label {
+.modal-icon {
+    position: absolute;
+    top: 26px;
+    left: 14px;
+    fill:#212121
+}
+  .modal-label {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
@@ -737,11 +764,25 @@ color: #757575;
     line-height: 1,17;
     letter-spacing: 0.01em;
     color: #757575;
+    position: relative;
   }
-  label:last-child {
-    display: inline;
+  .modal-check {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: #757575;
+    margin-bottom: 30px;
+    width: 424px;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .submit-btn {
+    .submit-btn {
     background: var(--brand-color);
     border-radius: 4px;
     font-family: 'Roboto';
@@ -782,7 +823,8 @@ font-weight: 400;
 font-size: 16px;
 line-height: 1,25;
 letter-spacing: 0.03em;
-background-color: #2F303A
+background-color: #2F303A;
+padding: 15px;
 }
 .spam-btn {
 padding: 10px 26px;
