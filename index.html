@@ -376,8 +376,14 @@
         <textarea class="modal-input" name="feedback" row="6" placeholder="Введите текст"></textarea>
         </label> 
         <label class="modal-check">
-        <input type="checkbox" name="policy" value="agree" />
-          Cоглашаюсь с рассылкой и принимаю <a class="modal-link" href="">Условия договора</a>
+        <input class="checkbox" visualy hidden type="checkbox" name="policy" value="agree" />
+        <span class="custom-checkbox">
+        <svg class="check-icon" width="11px" height="8px">
+          <use href="./images/sprite.svg#icon-galka">
+          </use>
+        </svg>
+      </span>
+       <span class="check-input-name">Cоглашаюсь с рассылкой и принимаю <a class="modal-link" href="">Условия договора</a></span>
         </label>
         <button class="submit-btn" type="submit">Отправить</button>
       </form>
